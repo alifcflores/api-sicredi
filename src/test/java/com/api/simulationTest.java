@@ -25,6 +25,7 @@ public class simulationTest {
     String name = faker.name().name();
     int monetaryValue = faker.number().numberBetween(1000, 20000);
     int installments = faker.number().numberBetween(1, 60);
+    String email = "faker@gmail.com";
 
     String[] cpfsWithRestriction = { "97093236014", "60094146012", "84809766080", "62648716050",
             "26276298085", "01317496094", "55856777050", "19626829001", "24094592008", "58063164083" };
@@ -52,7 +53,7 @@ public class simulationTest {
         Map<String, Object> map = new HashMap<String, Object>();
         map.put("cpf", cpfsWithRestriction[random]);
         map.put("nome", name);
-        map.put("email", name + "@gmail.com");
+        map.put("email", email);
         map.put("valor", monetaryValue);
         map.put("parcelas", installments);
         map.put("seguro", true);
